@@ -1,0 +1,381 @@
+@import'https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap';
+body {
+    
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    
+      /*background: #d0d1e6; 
+        background-size: 400% 400%;*/
+    
+    color: #333; /* Darker text for better readability */
+    cursor: auto; 
+    overflow-y: scroll; /* Ensure smooth scrolling */
+    scroll-behavior: smooth;
+}
+
+/* Override Bootstrap carousel background and make it fully transparent */
+.carousel,
+.carousel-inner,
+.carousel-item {
+    background: none !important;
+    box-shadow: none !important;
+}
+
+/* Make sure that no pseudo-elements are adding gradients or shading */
+.carousel .carousel-inner:before,
+.carousel .carousel-inner:after {
+    content: none !important;
+}
+
+/* Remove any box-shadow or background color on controls */
+.carousel-control {
+    background-color: transparent !important;  /* No background on controls */
+    box-shadow: none !important;               /* No shadow */
+}
+
+/* Remove shading on the left and right control indicators (arrows) */
+.carousel-control.left, 
+.carousel-control.right {
+    background-image: none !important; /* No background images or shading */
+}
+
+/* Ensure transparency for the carousel indicators (dots) */
+.carousel-indicators li {
+    background-color: transparent !important; /* No background color */
+}
+
+/* Also ensure the hover effect doesn't add shading */
+.carousel-indicators li:hover {
+    background-color: transparent !important; /* No hover background */
+}
+
+/* Remove any additional vignette or shading effects */
+.carousel-inner img {
+    filter: none !important;   /* No filters on images */
+    box-shadow: none !important; /* No shadow on images */
+}
+
+/* Adjust the carousel arrow sizes and colors */
+.carousel-control.left span,
+.carousel-control.right span {
+    font-size: 40px; /* Adjust size of the arrows */
+    color: #333; /* Change arrow color */
+}
+
+
+
+/* Style the custom circle cursor */
+.custom-cursor {
+    width: 50px; /* Size of the circle */
+    height: 50px;
+    position:fixed;
+    animation: cursor-fade-in 1s ease-in;
+    border-radius: 50%; /* Makes it a circle */
+    
+    background: rgba(0, 0, 0, 0.2); /* Black shadow-like color */
+    pointer-events: none; /* Prevents the circle from interfering with clicks */
+    transform: translate(-50%, -50%);
+    transition: transform 0.15s ease-out, width 0.15s ease-out, height 0.15s ease-out; /* Centers the circle on the cursor */
+    z-index: 9999; /* Ensures the circle stays on top */
+}
+
+/* General header styling */
+header {
+    padding: 0rem;
+    text-align: center;
+    margin-bottom: 0px;
+    position: relative; /* Ensures the pseudo-element can align with the header */
+    background: 
+        linear-gradient(rgba(227, 227, 239, 0.8), rgba(227, 227, 239, 0.8)), /* Lavender overlay with 80% opacity */
+        url('images/mask-bkgnd.jpg') center/cover no-repeat; /* Background image */
+    background-size: cover; /* Make sure the background image covers the entire area */
+    background-position: center;
+    min-height: 700px;
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Align items in a column */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+}
+
+header::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px; /* Adjust this to cover the uncovered area */
+    background: 
+        linear-gradient(rgba(227, 227, 239, 0.8), rgba(227, 227, 239, 0.8)), /* Lavender overlay */
+        url('images/mask-bkgnd.jpg') center/cover no-repeat;
+    z-index: -1; /* Ensure it appears behind the content */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3.5rem;
+    letter-spacing: 5px; /* More subtle letter spacing */
+    font-weight: 500;
+    background-color: black; /* Background black to highlight title */
+    color: white; /* White text for h1 */
+   
+    
+}
+
+.wiflen {
+   
+    position: fixed;
+    top: 0;
+    z-index: 100; /* Ensure the section stays on top while scrolling */
+    background-color: black;
+    padding: 1px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.logos {
+    margin-top: 20px; /* Add space between nav and logos */
+    
+}
+
+/* Style for left logo */
+.logo-left {
+    width: auto; /* Adjust the size as needed */
+    height: 80px;
+    margin-right: 900px;
+    margin-top: 150px; /* Spacing between left and right logos */
+}
+
+/* Style for right logo */
+.logo-right {
+    width: auto; /* Adjust the size as needed */
+    height: 90px;
+}
+
+/* Ensure logos are horizontally centered */
+.logos img {
+    display: inline-block;
+}
+
+.wiflen h1 {
+    font-size: 3.5rem;
+    letter-spacing: 5px;
+    font-weight: 500;
+    color: white;
+    padding: 5px;
+    margin: 0;
+    background-color: black; /* Black background for the heading */
+}
+
+/* Navigation menu styling inside the .wiflen class */
+ nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    text-align: center;
+}
+
+ nav ul li {
+    display: inline-block;
+    margin: 0 1rem;
+    
+}
+
+ nav ul li a {
+    color: #ffffff; /* White text for navigation to stand out on black background */
+    text-decoration: none;
+    font-weight: bold;
+    font-weight: 500;
+    font-size: 1.2rem;
+    display: inline-block;
+    position: relative;
+    margin-bottom:5px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+ nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px; /* Position the underline just below the text */
+    left: 0;
+    background-color: #ffffff; /* Underline color matching the text */
+    transition: width 0.3s ease-in-out;
+}
+
+ nav ul li a:hover {
+    color: #ffffff; /* Slightly lighter color on hover */
+    transform: translateY(-5px); /* Slight hover lift */
+}
+
+ nav ul li a:hover::after {
+    width: 100%; /* Full-width underline on hover */
+}
+
+
+/* Common styling for header h2 and project-title h2 */
+header h2, .project-title h2 {
+    font-size: 2rem;
+    color: #333; /* Default color, overridden for .project-title */
+    letter-spacing: 3px;
+    margin-bottom: 0px;
+    line-height: 1.5;
+    padding: 20px; /* Adjusted for common padding */
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+/* Unique styling for project-title h2 */
+.project-title h2 {
+    color: #1e1e1e; /* Specific color for project-title */
+    margin-top: 60px;
+    padding: 100px; /* Larger padding specific to project-title */
+}
+
+
+
+/* Main Content Padding */
+main {
+    padding: 2rem;
+}
+
+
+/* Section Styling */
+section {
+    h2{
+        text-transform:uppercase;
+    }
+    margin-bottom: 3rem;
+    padding: 10rem;
+    background: rgba(255, 255, 255, 0.9); /* Light background for sections */
+    border-radius: 10px;
+   /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);*/
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for pop effect */
+    text-align:center;
+    p{
+        font-size: 1.3rem;
+    }
+}
+
+section:not(#home):not(#students):hover {
+    transform: scale(1.05); /* Slightly scale the section on hover */
+}
+
+
+
+/* Team members and students - individual hover effects */
+.team-member:hover, .student:hover {
+    transform: scale(1.05); /* Slight hover scale for team members and students */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#home,#students {
+  
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 10rem;
+
+ h2 {
+    margin-bottom: 1rem;
+    font-weight: 500;
+    letter-spacing:5px;
+    color: #060314; /* Light purple for subheadings */
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+ p {
+    margin-bottom: 2rem;
+}
+span{
+    color:rgb(115, 50, 227);
+}
+}
+
+.team-members, .students {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    
+}
+
+.team-member, .student {
+    
+    background: rgba(255, 255, 255, 0.6); /* Slightly transparent background */
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: none;
+    text-align: center;
+    flex: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+}
+
+.team-member h3, .student h3 {
+   
+    text-decoration:none;
+    margin-bottom: 0.5rem;
+    font-weight:500;
+    font-size:1.5rem;
+    color: #000000; /* Light purple for consistency */
+}
+.team-member p, .student p {
+    line-height:1.5;
+    margin-bottom: 1rem;
+    color: #0a071d;
+}
+
+.team-member .col-right img {
+
+    width: 150px;           /* Fixed width */
+    height: 200px;          /* Fixed height */
+    object-fit: cover;      /* Ensures the image covers the area while maintaining aspect ratio */
+    border-radius: 20%;     /* Makes the image circular */
+    display: block;
+    margin: 0 auto;
+
+}
+.student-logo {
+    width: 30px; /* Adjust size of the logo */
+    height: auto;
+    margin-right: 10px; /* Space between logo and text */
+    vertical-align: middle;
+    transition: transform 0.3s ease; /* Smooth animation when hovering */
+}
+
+.student-logo:hover {
+    transform: scale(1.1); /* Slightly enlarge the logo on hover */
+}
+
+/* Footer Styling */
+footer {
+    background: #030310; /* Light background for footer */
+    color: #ebebf3;
+    text-align: center;
+    padding: 1rem;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    margin: 0;
+
+}
+
+
+
+/* Parallax Background */
+.parallax-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('yourimage.jpg'); /* Replace with your own image */
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -1;
+    filter: brightness(0.7); /* Slightly lighter filter for the image */
+}
