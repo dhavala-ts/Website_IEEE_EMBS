@@ -246,14 +246,14 @@ main {
 section {
     h2{
         text-transform:uppercase;
+        text-align:center;
     }
     margin-bottom: 3rem;
     padding: 10rem;
     background: rgba(255, 255, 255, 0.9); /* Light background for sections */
     border-radius: 10px;
    /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);*/
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for pop effect */
-    text-align:center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for pop effect */    
     p{
         font-size: 1.3rem;
     }
@@ -357,6 +357,51 @@ footer {
     text-align: center;
     padding: 1rem;
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+}
+#contact {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.info {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    width: 300px;
+}
+
+.info:hover {
+    transform: translateY(-10px);
+}
+
+.info h4 {
+    font-size: 1.5rem;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.info p {
+    font-size: 1rem;
+    margin-top: 10px;
+    color: #666;
+}
+
+
+/* Add responsive adjustments */
+@media (max-width: 768px) {
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 footer p {
