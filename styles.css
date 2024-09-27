@@ -67,7 +67,6 @@ body {
     position:fixed;
     animation: cursor-fade-in 1s ease-in;
     border-radius: 50%; /* Makes it a circle */
-    
     background: rgba(0, 0, 0, 0.2); /* Black shadow-like color */
     pointer-events: none; /* Prevents the circle from interfering with clicks */
     transform: translate(-50%, -50%);
@@ -108,12 +107,11 @@ header::after {
 }
 
 .wiflen {
-   
     position: fixed;
     top: 0;
     z-index: 100; /* Ensure the section stays on top while scrolling */
     background-color: black;
-    padding: 1px;
+    padding: 0px;
     width: 100%;
     box-sizing: border-box;
 }
@@ -148,10 +146,9 @@ header::after {
     font-weight: 500;
     color: white;
     padding: 5px;
-    margin: 0;
+    margin-bottom: -10px !important;
+    margin-top: -1px !important;
     background-color: black; /* Black background for the heading */
-    margin: 0;
-
 }
 
 /* Navigation menu styling inside the .wiflen class */
@@ -176,7 +173,7 @@ header::after {
     font-size: 1.8rem;
     display: inline-block;
     position: relative;
-    margin-bottom:5px;
+    margin-bottom:0px;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
@@ -192,6 +189,7 @@ header::after {
 }
 
  nav ul li a:hover {
+    text-decoration: none;
     color: #ffffff; /* Slightly lighter color on hover */
     transform: translateY(-5px); /* Slight hover lift */
 }
@@ -214,134 +212,70 @@ header h2, .project-title h2 {
     line-height: 1.6;
 }
 
+
 /* Main Content Padding */
 main {
     padding: 2rem;
 }
 
 
-/* Section Styling */
-section {
-    h2{
-        text-transform:uppercase;
-        text-align:center;
-    }
+/* Section Styling - apply to all sections except #home */
+section:not(#home):not(#core-and-students) {
     margin-bottom: 3rem;
     padding: 10rem;
     background: rgba(255, 255, 255, 0.9); /* Light background for sections */
     border-radius: 10px;
-   /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);*/
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for pop effect */    
-    p{
-        font-size: 1.8rem;
-    }
 }
 
-section:not(#home):not(#students):not(#contact):hover {
+section:not(#home) h2 {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+section:not(#home) p {
+    font-size: 1.8rem;
+}
+
+
+section:not(#core-and-students):not(#home):not(#contact):hover {
     transform: scale(1.05); /* Slightly scale the section on hover */
 }
 
 
-
-/* Team members and students - individual hover effects */
-.team-member:hover, .student:hover {
-    transform: scale(1.05); /* Slight hover scale for team members and students */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Unified section styling for both Team Members and Students */
+#core-and-students {
+    background-color: #e5e3ee !important; /* Light lavender background */
+    text-align: center;
+    padding: 5rem 10rem !important;
+    margin: 5rem 10rem;
 }
 
-#home,#students {
-    background-color: #efeef6; /* Light lavender background */
-    text-align: center;
-   
-    padding:5rem 12rem;
-    margin: 5rem 15rem;
-
- h2 {
-    margin-bottom: 1rem;
+#core-and-students h2 {
+    margin-top: 0rem;
     font-weight: 500;
-    letter-spacing:5px;
+    letter-spacing: 5px;
     color: #060314; /* Light purple for subheadings */
     font-size: 3rem;
     text-transform: uppercase;
-}
-
- p {
-    margin-bottom: 2rem;
-    font-size:1.8rem;
-}
-span{
-    color:rgb(115, 50, 227);
-}
-}
-
-.team-members, .students {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    
-}
-
-.team-member, .student {
-    
-    background: rgba(255, 255, 255, 0.6); /* Slightly transparent background */
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: none;
-    text-align: center;
-    flex: 1;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    
-}
-
-.team-member h3, .student h3 {
-   
-    text-decoration:none;
-    margin-bottom: 0.5rem;
-    font-weight:500;
-    font-size:2rem;
-    color: #000000; /* Light purple for consistency */
-}
-.team-member p, .student p {
-    line-height:1.5;
     margin-bottom: 1rem;
-    color: #0a071d;
+}
+/* Add specific margin for the "Students" heading */
+#students-heading {
+    margin-top: 5rem !important; /* Space above the "Students" heading */
 }
 
-.team-member .col-right img{
-
-    width: 150px;           /* Fixed width */
-    height: 200px;          /* Fixed height */
-    object-fit: cover;      /* Ensures the image covers the area while maintaining aspect ratio */
-    border-radius: 20%;     /* Makes the image circular */
-    display: block;
-    margin: 0 auto;
-
+#core-and-students p {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
 }
-  /* 
-  .student-logo {
-    width: 30px; 
-    height: auto;
-    margin-right: 10px;
-    vertical-align: middle;
-    transition: transform 0.3s ease; 
-}.
 
-.students h3{
-  
-        display: inline-flex;
-        align-items: center;     
-        font-size: 18px;
-        font-weight: 600;
-   
+#core-and-students span {
+    color: rgb(115, 50, 227);
 }
-.student-logo:hover {
-    transform: scale(1.1);
-}*/
 
-
-
-.student-card {
+.team-card{
     background-color: #ffffff;
     border-radius: 15px;
     padding: 30px 20px; /* Added more padding to balance around the image */
@@ -352,18 +286,43 @@ span{
     flex-direction: column;
     align-items: center; /* Center content in the card */
     justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-be tween;
+    align-items: center;
+    height: 100%; /* Ensure consistent card height */
+   
+}
+.student-card {
+ 
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 30px 10px !important; /* Added more padding to balance around the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effect */
+    height: 100%; /* Ensure all cards are the same height */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content in the card */
+    justify-content: flex-start;
+    display:inline-flex !important;
+    flex-direction: column;
+    justify-content: space-be tween;
+    width: 30rem !important;
+    height: 100%; /* Ensure consistent card height */
+   
 }
 
-.student-card:hover {
+.team-card:hover, .student-card:hover {
     transform: translateY(-5px); /* Slight lift effect */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Darker shadow on hover */
 }
 
-.student-img {
+.team-img, .student-img {
     margin-bottom: 20px; /* Add space between image and text */
 }
 
-.student-img img {
+.team-img img,.student-img img {
     width: 150px;           /* Fixed width */
     height: 200px;          /* Fixed height */
     object-fit: cover;      /* Ensures the image covers the area while maintaining aspect ratio */
@@ -372,18 +331,19 @@ span{
     margin: 0 auto;         /* Center the image horizontally */
 }
 
-.student-details {
+.team-details  .student-details {
     text-align: center;     /* Center align the student details */
     padding-top: 10px;      /* Ensures padding between image and details */
+
 }
 
-.student-details h3 {
+.team-details h3,.student-details h3 {
     font-size: 18px;
     font-weight: 600;
     margin-top: 10px;
 }
 
-.student-details p {
+.team-details p .student-details p {
     color: #333333;
     font-size: 14px;
     margin-top: 10px;
@@ -402,17 +362,6 @@ span{
     justify-content: center; /* Center the student cards horizontally */
     flex-wrap: wrap;
 }
-
-.student-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%; /* Ensure consistent card height */
-}
-
-
-
 
 #contact {
     padding: 50px 0;
@@ -486,7 +435,7 @@ button.btn {
 }
 /* Footer Styling */
 footer {
-    background: rgb(47, 47, 47); /* Light background for footer */
+    background: rgb(0, 0, 0); /* Light background for footer */
     color: #ebebf3;
     font-size:2rem;
     text-align: center;
@@ -497,7 +446,6 @@ footer p {
     margin: 0;
 
 }
-
 
 /* Parallax Background */
 .parallax-bg {
