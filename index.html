@@ -9,27 +9,26 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
     <link rel="stylesheet" href="styles.css">
    
 </head>
 <body>
     <div class="parallax-bg"></div>
-
-    <header>
-        
+    
+<section id="home">
+<header>
         <div class="wiflen">
-           
             <h1>WIFLEN</h1>
-
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>           
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#students">Students</a></li>
+                <li><a href="#home">Home</a></li>   
+                <li><a href="#about">About</a></li>  
+                <li><a href="#core-and-students">Members</a></li>         
+                <li><a href="#fundings">Fundings</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#datsets">Datasets</a></li>
-              
+                <li><a href="#publications">Publications</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -44,92 +43,10 @@
             <h2>Design and Development of Wireless Flexible Electronics <span>Nasal Wiflen Mask</span> for respiratory breathing assessments</h2>
         </div>
     </header>
+</section>
 
     <main>
           
-        <section id="home">
-            <h2>HOME</h2>
-            <p>Meet the <span>core</span> members of the project.</p>
-            <!-- Bootstrap Carousel for Team Members -->
-        <div id="teamCarousel" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#teamCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#teamCarousel" data-slide-to="1"></li>
-                
-            </ol>
-
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner">
-                <div class="item active">
-                    <div class="team-members">
-                        <!-- First set of 3 team members -->
-                        <div class="team-member">
-                            <h3>Dr N. Sriram</h3>
-                            <p>Principal investigator</p>
-                            <div class="col-right">
-                                <img src="images/Image 19-09-24 at 5.29 PM.jpg" alt="Dr N. Sriram">
-                            </div>
-                        </div>
-                        <div class="team-member">
-                            <h3>Mrs Purnima BR</h3>
-                            <p>Team Member</p>
-                            <div class="col-right">
-                                <img src="images/IMG_9546.jpg" alt="Mrs Purnima BR">
-                            </div>
-                        </div>
-                        <div class="team-member">
-                            <h3>Mr Jigyans K M</h3>
-                            <p>Team Member</p>
-                            <div class="col-right">
-                                <img src="images/IMG_9547.jpg" alt="Mr Jigyans KM">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="team-members">
-                        <!-- Second set of 3 team members -->
-                        <div class="team-member">
-                            <h3>Dr. Gayathri Devi</h3>
-                            <p>Team Doctor</p>
-                            <div class="col-right">
-                                <img src="images/IMG_9549.jpg" alt="Dr Gayathri Devi">
-                            </div>
-                        </div>
-                        <div class="team-member">
-                            <h3>Dr Subramanian K R V</h3>
-                            <p>Co-Investigator</p>
-                            <div class="col-right">
-                                <img src="images/IMG_9550.jpg" alt="Dr Subramanian K R V">
-                            </div>
-                        </div>
-                        <div class="team-member">
-                            <h3>Kiran D</h3>
-                            <p>JRF</p>
-                            <div class="col-right">
-                                <img src="images/IMG_9551.jpg" alt="Kiran D">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Add more slides for additional team members as needed -->
-            </div>
-
-            <!-- Left and right controls -->
-            <a class="left carousel-control" href="#teamCarousel" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#teamCarousel" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-    </section>
-
         <section id="about">
             <h2>About</h2>
             <p>Aim: To develop a flexible wireless electronics mask comprehensive breath monitory and respiratory assessment<br> 
@@ -138,85 +55,254 @@
                 1.Prior reviewed Journal / Conference Publication.<br>
                 2. Development of different Machine Learning and Deep Learning models for analysis and visualizations  of breath signals.<br>
                 3.Mobile Application displaying respiratory vitals and the type of breathing data.<br>
+                <br> <br> <b> Overview</b> <br>
+                The project focuses on evaluating respiratory signals to identify four breathing patterns: normal, deep, rapid, and shallow. It utilizes a wearable nasal mask with humidity sensors to collect data, which is then preprocessed by removing baseline drift and outliers. The data is normalized and segmented for analysis. An ensemble model combining 1D-CNN, LSTM, and SVM classifiers is employed for classification. The framework's effectiveness is measured using accuracy, F1 score, and Matthews Correlation Coefficient (MCC).
                 
             </p>
             <!-- List of Projects -->
         </section>
-
-        <section id="publications">
-            <h2>Publications</h2>
-            <p>We regularly publish research papers in top journals. Explore our latest work here.</p>
-            <!-- List of Publications -->
-        </section>
-
-        <section id="students">
-            <h2>Students</h2>
-            <p>Our students from different disciplines gather here to contribute to the research.</p>
+     
+            <!-- Combined Section for Team Members and Students -->
+            <section id="core-and-students">
+                <h2>CORE MEMBERS</h2>
+        <p> Meet the core memebrs of the project</p>
+                <!-- Team Members Carousel -->
+                <div id="teamCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#teamCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#teamCarousel" data-slide-to="1"></li>
+                    </ol>
         
-            <!-- Bootstrap Carousel for Students -->
-            <div id="studentCarousel" class="carousel slide" data-ride="carousel">
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                    <li data-target="#studentCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#studentCarousel" data-slide-to="1"></li>
-                </ol>
-        
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner">
-                    <!-- First slide: First 2 students -->
-                    <div class="item active">
-                        <div class="student">
-                            <h3>
-                                <a href="https://www.linkedin.com/in/nithin-m-kannal-74213a263/" target="_blank">
-                                    <img src="images/linkedin-okay.png" alt="Nithin's Logo" class="student-logo"> Nithin
-                                </a>
-                            </h3>
-                            <p>Pursuing B.E. in AIML<br> MSRIT <br> Building of the model</p>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <!-- First slide: First 3 team members -->
+                        <div class="item active">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="team-card">
+                                        <div class="team-img">
+                                            <img src="images/Image 19-09-24 at 5.29 PM.jpg" alt="Dr N. Sriram">
+                                        </div>
+                                        <div class="team-details">
+                                            <h3>Dr N. Sriram</h3>
+                                            <p>Principal investigator</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="team-card">
+                                        <div class="team-img">
+                                            <img src="images/IMG_9546.jpg" alt="Mrs Purnima BR">
+                                        </div>
+                                        <div class="team-details">
+                                            <h3>Mrs Purnima BR</h3>
+                                            <p>Team Member</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="team-card">
+                                        <div class="team-img">
+                                            <img src="images/IMG_9547.jpg" alt="Mr Jigyans KM">
+                                        </div>
+                                        <div class="team-details">
+                                            <h3>Mr Jigyans K M</h3>
+                                            <p>Team Member</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="student">
-                            <h3>
-                                <a href="https://www.linkedin.com/in/mithali-s-channal-652535299/" target="_blank">
-                                    <img src="images/linkedin-full.png" alt="Mithali's Logo" class="student-logo"> Mithali. S. Channal
-                                </a>
-                            </h3>
-                            <p>Pursuing B.E. in Medical Electronics<br> MSRIT<br></p>
+        
+                        <!-- Second slide: Next 3 team members -->
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="team-card">
+                                        <div class="team-img">
+                                            <img src="images/IMG_9549.jpg" alt="Dr Gayathri Devi">
+                                        </div>
+                                        <div class="team-details">
+                                            <h3>Dr. Gayathri Devi</h3>
+                                            <p>Team Doctor</p>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="col-md-4">
+                                    <div class="team-card">
+                                        <div class="team-img">
+                                            <img src="images/IMG_9550.jpg" alt="Dr Subramanian K R V">
+                                        </div>
+                                        <div class="team-details">
+                                            <h3>Dr Subramanian K R V</h3>
+                                            <p>Co-Investigator</p>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="col-md-4">
+                                    <div class="team-card">
+                                        <div class="team-img">
+                                            <img src="images/IMG_9551.jpg" alt="Kiran D">
+                                        </div>
+                                        <div class="team-details">
+                                            <h3>Kiran D</h3>
+                                            <p>JRF</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
         
-                    <!-- Second slide: Next 2 students -->
-                    <div class="item">
-                        <div class="student">
-                            <h3>
-                                <a href="https://www.linkedin.com/in/dhavalats/" target="_blank">
-                                    <img src="images/linkedin-full.png" alt="Dhavala's Logo" class="student-logo"> Dhavala. T. S
-                                </a>
-                            </h3>
-                            <p>Pursuing B.E. in AIML<br> MSRIT<br></p>
-                        </div>
-                        <div class="student">
-                            <h3>
-                                <a href="https://www.linkedin.com/in/amogh-link" target="_blank">
-                                    <img src="images/linkedin-full.png" alt="Amogh's Logo" class="student-logo"> Amogh Shastry
-                                </a>
-                            </h3>
-                            <p>Pursuing B.E. in Medical Electronics<br> MSRIT<br></p>
-                        </div>
-                    </div>
+                    <!-- Left and right controls for Team Members -->
+                    <a class="left carousel-control" href="#teamCarousel" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#teamCarousel" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
+                <h2 id="students-heading">Students</h2>
+                <p>Our students from different disciplines gather here to contribute to the research.</p>
+                <!-- Students Carousel -->
+                <div id="studentCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#studentCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#studentCarousel" data-slide-to="1"></li>
+                    </ol>
+                    
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <!-- First slide: First 2 students -->
+                        <div class="item active">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="student-card">
+                                        <div class="student-img">
+                                            <img src="images/nithin.png" alt="Nithin">
+                                        </div>
+                                        <div class="student-details">
+                                            <h3>Nithin M Kannal
+                                                <a href="https://www.linkedin.com/in/nithin-m-kannal-74213a263/" target="_blank">
+                                                    <img src="images/linkedin-okay.png" alt="Nithin's Logo" class="student-logo">
+                                                </a>
+                                            </h3>
+                                            <p>Pursuing B.E. in AIML<br> MSRIT <br> Building of the model</p>
+                                        </div>
+                                    </div>
+                                </div>
         
-                <!-- Left and right controls -->
-                <a class="left carousel-control" href="#studentCarousel" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="right carousel-control" href="#studentCarousel" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-        </section>
+                                <div class="col-md-6">
+                                    <div class="student-card">
+                                        <div class="student-img">
+                                            <img src="images/mithali.png" alt="Mithali">
+                                        </div>
+                                        <div class="student-details">
+                                            <h3>Mithali. S. Channal
+                                                <a href="https://www.linkedin.com/in/mithali-s-channal-652535299/" target="_blank">
+                                                    <img src="images/linkedin-okay.png" alt="Mithali's Logo" class="student-logo">
+                                                </a>
+                                            </h3>
+                                            <p>Pursuing B.E. in Medical Electronics<br> MSRIT<br></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
         
+                        <!-- Second slide: Next 2 students -->
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="student-card">
+                                        <div class="student-img">
+                                            <img src="dhavala.jpg" alt="Dhavala">
+                                        </div>
+                                        <div class="student-details">
+                                            <h3>Dhavala. T. S
+                                                <a href="https://www.linkedin.com/in/dhavalats/" target="_blank">
+                                                    <img src="images/linkedin-okay.png" alt="Dhavala's Logo" class="student-logo">
+                                                </a>
+                                            </h3>
+                                            <p>Pursuing B.E. in AI&DS<br> MSRIT<br></p>
+                                        </div>
+                                    </div>
+                                </div>
         
+                                <div class="col-md-6">
+                                    <div class="student-card">
+                                        <div class="student-img">
+                                            <img src="amogh.png" alt="Amogh">
+                                        </div>
+                                        <div class="student-details">
+                                            <h3>Amogh Shastry
+                                                <a href="https://www.linkedin.com/in/amogh-shastry-95065a277/" target="_blank">
+                                                    <img src="images/linkedin-okay.png" alt="Amogh's Logo" class="student-logo">
+                                                </a>
+                                            </h3>
+                                            <p>Pursuing B.E. in Medical Electronics<br> MSRIT<br></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Left and right controls for Students -->
+                    <a class="left carousel-control" href="#studentCarousel" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#studentCarousel" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </section>
+     
+
+         <section id="publications">
+                <h2>Publications</h2>
+                <br>
+                <a href= "https://docs.google.com/document/d/1ZOX6lRqpUMZzwar25W7eBIvJ3tVkOfU2/edit?usp=sharing&ouid=113187443285753138391&rtpof=true&sd=true" target="_blank">
+                    <button type="button" class="btn btn-primary">View Progress</button>
+                </a> 
+                <br>
+                <br>
+                <div class="publication-img">
+                    <img src="images/publication1.jpg" alt="Publication 1">
+                    <p> The Wireless Flexible Electronic Nasal (WIFLEN) sensor, paired with a Fast Dense CNN (FASDEN-CNN), captures temperature, pressure, and humidity at the nostrils to recognize breathing patterns. After collecting and cleaning data from various activities, feature extraction and statistical analysis were performed. A deep AI model was developed to classify inhalation and exhalation points, validated against a clinical device. Significant differences in nostril measurements across activities were noted, and Hilbert transform was applied to generate 2D spectrograms for binary classification using FASDEN-CNN.</p>                </div>
+                <div class="publication-img">
+                    <img src="images/publication2.jpg" alt="Publication 2">
+                    <p>The respiratory signal assessment framework uses a wearable nasal mask to capture temperature, pressure, and humidity variations from both nostrils during normal breathing, deep breathing, and walking. This method, using a nasal sensor instead of traditional thoracic sensors, cleanses and segments the signals with a 10-second Hamming window at 50% overlap. The normalized segments are analyzed using the EDRS-LSTM deep learning model, with performance evaluated on precision, recall, ROC, accuracy, and F1 score for the three breathing conditions.
+
+                    </p>            
+                </div>
+                <div class="publication-img">
+                    <img src="images/publication3.jpg" alt="Publication 3">
+                    <p>The evaluation framework for respiratory signals analyzes four breathing patterns: normal, deep, rapid, and shallow. A wearable nasal mask with humidity sensors collects data, which is preprocessed to remove baseline drift and outliers. The data is normalized and segmented with 80% overlap. An ensemble model combining 1D-CNN, LSTM, and SVM classifiers is used for analysis. Performance is assessed using accuracy, F1 score, and Matthews Correlation Coefficient (MCC).</p>                </div>
+         </section>
+
+             <!-- Fundings Section -->
+         <section id="fundings">
+             <h2>Fundings</h2>
+             <p>This project is funded by multiple grants aimed at improving healthcare technology.<br> <br>
+                <b>IITI Drishti Funding </b> <br> </b>The Technology Business Incubator (TBI) at IITI DRISHTI CPS Foundation incubates and supports both registered startups as well as early stage entrepreneurs looking to establish a startup to commercialize their innovative products and solutions. The TBI is dedicated to creating and promoting a sustainable entrepreneurial ecosystem by supporting technology development and commercialization through financial assistance
+             </p>
+             <a href="Decision letter-IITI-823254.pdf" target="_blank">
+                 <button type="button" class="btn btn-primary">View Decision Letter</button>
+             </a>
+          </section>
+
+
+
+    
         
         <section id="projects">
             <h2>Projects</h2>
@@ -232,24 +318,38 @@
             <!-- List of Datasets -->
         </section>
 
-     
-
         <section id="contact">
             <h2>Contact Us</h2>
-            <p>Want to collaborate or learn more? Reach out to us via email or social media.</p>
-            <br>
-            <p>msrit.edu <span class="glyphicon glyphicon-envelope"></span></p>
-            <br>
-            <p>9xx456xx78 <span class="glyphicon glyphicon-earphone"></span></p> 
-
-           
+            <p>Want to collaborate or learn more? Reach out to us via email or phone.</p>
+            <div class="contact-info">
+                <!-- Email Info Card -->
+                <div class="info">
+                    <a href="sriraam@msrit.edu" target="_blank">
+                        <button type="button" class="btn btn-default btn-sm">
+                            <span class="glyphicon glyphicon-envelope" class="call-icon"></span>
+                          </button> 
+                    </a>
+                    <h4>Mail Us Here </h4>
+                    <p>admin00@gmail.com</p>
+                </div>
+                <!-- Call Info Card -->
+                <div class="info">
+                    <button type="button" class="btn btn-default btn-sm">
+                        <span class="glyphicon glyphicon-earphone" class="call-icon"></span>
+                      </button> 
+                    <h4>Call Us</h4>
+                    <p>98xxx67xxx</p>
+                </div>
+            </div>
         </section>
+
     </main>
 
     <footer>
-        <p>&copy; 2024 IEEE_EMBS Research Club | All rights reserved.</p>
+        <p>&copy; WIFLEN | All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
+   
 </body>
 </html>
