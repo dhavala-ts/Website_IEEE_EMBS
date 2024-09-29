@@ -50,6 +50,8 @@ videos.forEach(({ video }) => {
     });
 });
 
+
+
 // Event listeners for scrolling and resizing
 window.addEventListener('scroll', checkVideoPlayback);
 window.addEventListener('resize', checkVideoPlayback);

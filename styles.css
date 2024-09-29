@@ -249,6 +249,25 @@ video {
     height: auto;
     border-radius: 20px; /* Additional rounding for video */
 }
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="range"] {
+    width: 100px;
+}
 
 
 section:not(#core-and-students):not(#home):not(#contact):hover {
